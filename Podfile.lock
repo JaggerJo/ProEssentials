@@ -1,0 +1,15 @@
+PODS:
+  - macOSThemeKit (1.1.1)
+  - PlainPing (0.5)
+
+DEPENDENCIES:
+  - macOSThemeKit (~> 1.1.0)
+  - PlainPing
+
+SPEC CHECKSUMS:
+  macOSThemeKit: b21b1dca8dc564470d224425e06c8a9397608891
+  PlainPing: 6b248b94d92be7ec0410952d1b09af43b9a39015
+
+PODFILE CHECKSUM: 4fc6e7cde48d8ae1d4ca05348ccb65856e29c1d4
+
+COCOAPODS: 1.4.0

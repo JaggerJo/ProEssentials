@@ -7,20 +7,22 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-
-
+    var internetIndicator = InternetIndicator()
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        ThemeManager.darkTheme.apply()
+        createIndicators()
+    }
+    
+    func createIndicators() {
+        internetIndicator.create()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        internetIndicator.destroy()
     }
-
-
 }
-

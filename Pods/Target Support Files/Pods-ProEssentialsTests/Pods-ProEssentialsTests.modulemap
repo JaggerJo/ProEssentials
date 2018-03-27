@@ -1,0 +1,6 @@
+framework module Pods_ProEssentialsTests {
+  umbrella header "Pods-ProEssentialsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
