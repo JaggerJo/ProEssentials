@@ -10,13 +10,20 @@ import Cocoa
 import macOSThemeKit
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {
     var internetIndicator = InternetIndicator()
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        NSUserNotificationCenter.default.delegate = self
         ThemeManager.darkTheme.apply()
         createIndicators()
     }
+
+    
+    func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
+        return true
+    }
+    
     
     func createIndicators() {
         internetIndicator.create()

@@ -16,6 +16,9 @@
 		7A31EF9B205E78FB00EB0F01 /* ProEssentialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31EF9A205E78FB00EB0F01 /* ProEssentialsTests.swift */; };
 		7AD34224206A3C25009F2479 /* InternetIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34223206A3C25009F2479 /* InternetIndicator.swift */; };
 		7AD34227206A3CF7009F2479 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34226206A3CF7009F2479 /* Indicator.swift */; };
+		7AD3422D206A798F009F2479 /* InternetIndicatorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3422C206A798F009F2479 /* InternetIndicatorSettings.swift */; };
+		7AD34235206A7C67009F2479 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34234206A7C67009F2479 /* SettingsManager.swift */; };
+		7AD34237206A80ED009F2479 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34236206A80ED009F2479 /* Setting.swift */; };
 		FE44627EF27154BA1BAAAEDB /* Pods_ProEssentialsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91FA5981F5D51057B1CD2F1 /* Pods_ProEssentialsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +51,13 @@
 			remoteGlobalIDString = ADDC2A8A9C95B2E2ECCCAD79C8887371;
 			remoteInfo = "Pods-ProEssentialsTests";
 		};
+		7AD34232206A7990009F2479 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A31EFA5205EA11300EB0F01 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ADB42A38DF2DF65A95FCADAB70A665DA;
+			remoteInfo = PlainPing;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +77,9 @@
 		7A31EFA5205EA11300EB0F01 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
 		7AD34223206A3C25009F2479 /* InternetIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetIndicator.swift; sourceTree = "<group>"; };
 		7AD34226206A3CF7009F2479 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
+		7AD3422C206A798F009F2479 /* InternetIndicatorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetIndicatorSettings.swift; sourceTree = "<group>"; };
+		7AD34234206A7C67009F2479 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		7AD34236206A80ED009F2479 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		B91FA5981F5D51057B1CD2F1 /* Pods_ProEssentialsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProEssentialsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96B941E19651F04D47C7DDA /* Pods-ProEssentials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProEssentials.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProEssentials/Pods-ProEssentials.debug.xcconfig"; sourceTree = "<group>"; };
 		F022AC9E1A76EF6D2A3E7013 /* Pods-ProEssentialsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProEssentialsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProEssentialsTests/Pods-ProEssentialsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +121,7 @@
 				7AD34225206A3C51009F2479 /* ServerMonitor */,
 				7AD34220206A3BC1009F2479 /* Internet */,
 				7AD34226206A3CF7009F2479 /* Indicator.swift */,
+				7AD34236206A80ED009F2479 /* Setting.swift */,
 			);
 			path = Indicators;
 			sourceTree = "<group>";
@@ -161,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				7A31EFAC205EA11300EB0F01 /* macOSThemeKit.framework */,
+				7AD34233206A7990009F2479 /* PlainPing.framework */,
 				7A31EFAE205EA11300EB0F01 /* Pods_ProEssentials.framework */,
 				7A31EFB0205EA11300EB0F01 /* Pods_ProEssentialsTests.framework */,
 			);
@@ -171,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				7AD34223206A3C25009F2479 /* InternetIndicator.swift */,
+				7AD3422C206A798F009F2479 /* InternetIndicatorSettings.swift */,
 			);
 			path = Internet;
 			sourceTree = "<group>";
@@ -186,6 +202,7 @@
 		7AD34229206A670C009F2479 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				7AD34234206A7C67009F2479 /* SettingsManager.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -311,6 +328,13 @@
 			fileType = wrapper.framework;
 			path = Pods_ProEssentialsTests.framework;
 			remoteRef = 7A31EFAF205EA11300EB0F01 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7AD34233206A7990009F2479 /* PlainPing.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PlainPing.framework;
+			remoteRef = 7AD34232206A7990009F2479 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -446,7 +470,10 @@
 				7AD34224206A3C25009F2479 /* InternetIndicator.swift in Sources */,
 				7A31EF8A205E78FB00EB0F01 /* ViewController.swift in Sources */,
 				7A31EF88205E78FB00EB0F01 /* AppDelegate.swift in Sources */,
+				7AD34235206A7C67009F2479 /* SettingsManager.swift in Sources */,
+				7AD3422D206A798F009F2479 /* InternetIndicatorSettings.swift in Sources */,
 				7AD34227206A3CF7009F2479 /* Indicator.swift in Sources */,
+				7AD34237206A80ED009F2479 /* Setting.swift in Sources */,
 				7A195334205F97100014DE06 /* DotMatrixView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

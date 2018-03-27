@@ -14,14 +14,20 @@ public class InternetIndicator : Indicator {
     private var indicator: NSStatusItem? = nil;
     private var timer: Timer? = nil;
     private var internetAvailiable: Bool? = nil;
+    private var settings: InternetIndicatorSettings? = nil;
     
     public func create() {
+        loadSettings()
         createIndicator()
         startConnectionChecking()
     }
     
     public func destroy() {
         destroyIndicator()
+    }
+    
+    private func loadSettings() {
+        settings = SettingsManager().loadOrFallback(type: InternetIndicatorSettings.self)
     }
     
     private func createIndicator() {
@@ -37,7 +43,7 @@ public class InternetIndicator : Indicator {
     
     private func startConnectionChecking() {
         timer = Timer.scheduledTimer(
-            timeInterval: 5,
+            timeInterval: settings!.pingInterval,
             target: self,
             selector: #selector(checkConnection),
             userInfo: nil,
@@ -46,7 +52,7 @@ public class InternetIndicator : Indicator {
     
     @objc
     private func checkConnection() {
-        PlainPing.ping("www.apple.com", withTimeout: 1.0) {
+        PlainPing.ping(settings!.host, withTimeout: settings!.pingTimeout) {
             (timeElapsed:Double?, error:Error?) in
             
             if timeElapsed != nil {
@@ -84,7 +90,9 @@ public class InternetIndicator : Indicator {
                         : "internet_indicator_red"
                 ))
                 
-                showNotification(state: state!);
+                if settings!.showNotifications == true {
+                    showNotification(state: state!);
+                }
             }
         }
     }
@@ -92,9 +100,10 @@ public class InternetIndicator : Indicator {
     private func showNotification(state: Bool) {
         let notification = NSUserNotification()
         notification.identifier = UUID().uuidString
-        notification.title = "Internet Availiable"
-        notification.subtitle = "How are you?"
-        notification.informativeText = "This is a test"
+        notification.title = state
+            ? "Internet Availiable"
+            : "Internet Unavailiable"
+        
         notification.soundName = NSUserNotificationDefaultSoundName
         notification.contentImage = NSImage(named: NSImage.Name(
             state
@@ -104,6 +113,7 @@ public class InternetIndicator : Indicator {
         
         // Manually display the notification
         let notificationCenter = NSUserNotificationCenter.default
+        notificationCenter.removeAllDeliveredNotifications()
         notificationCenter.deliver(notification)
     }
 }
