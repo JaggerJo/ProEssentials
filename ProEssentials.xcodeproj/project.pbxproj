@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		01161FD9B4B70594C1AA3482 /* Pods_ProEssentials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F125BDB423C554E7BCC9B5F6 /* Pods_ProEssentials.framework */; };
-		7A195334205F97100014DE06 /* DotMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A195333205F97100014DE06 /* DotMatrixView.swift */; };
 		7A31EF88205E78FB00EB0F01 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31EF87205E78FB00EB0F01 /* AppDelegate.swift */; };
 		7A31EF8C205E78FB00EB0F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A31EF8B205E78FB00EB0F01 /* Assets.xcassets */; };
 		7A31EF8F205E78FB00EB0F01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A31EF8D205E78FB00EB0F01 /* Main.storyboard */; };
@@ -86,7 +85,6 @@
 /* Begin PBXFileReference section */
 		084D42AD4F259BA272D39AF7 /* Pods-ProEssentials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProEssentials.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProEssentials/Pods-ProEssentials.release.xcconfig"; sourceTree = "<group>"; };
 		3E0D899C383EAE88C4FA5BEB /* Pods-ProEssentialsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProEssentialsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProEssentialsTests/Pods-ProEssentialsTests.release.xcconfig"; sourceTree = "<group>"; };
-		7A195333205F97100014DE06 /* DotMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotMatrixView.swift; sourceTree = "<group>"; };
 		7A31EF84205E78FB00EB0F01 /* ProEssentials.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProEssentials.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A31EF87205E78FB00EB0F01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A31EF8B205E78FB00EB0F01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 		7A19532F205F96D60014DE06 /* Indicators */ = {
 			isa = PBXGroup;
 			children = (
-				7AD34225206A3C51009F2479 /* ServerMonitor */,
 				7AD34220206A3BC1009F2479 /* Internet */,
 				7AD34226206A3CF7009F2479 /* Indicator.swift */,
 			);
@@ -216,14 +213,6 @@
 				7AD3422C206A798F009F2479 /* InternetIndicatorSettings.swift */,
 			);
 			path = Internet;
-			sourceTree = "<group>";
-		};
-		7AD34225206A3C51009F2479 /* ServerMonitor */ = {
-			isa = PBXGroup;
-			children = (
-				7A195333205F97100014DE06 /* DotMatrixView.swift */,
-			);
-			path = ServerMonitor;
 			sourceTree = "<group>";
 		};
 		7AD34229206A670C009F2479 /* Lib */ = {
@@ -443,6 +432,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ProEssentials/Pods-ProEssentials-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bond/Bond.framework",
 				"${BUILT_PRODUCTS_DIR}/Differ/Differ.framework",
+				"${BUILT_PRODUCTS_DIR}/OGSwitch/OGSwitch.framework",
 				"${BUILT_PRODUCTS_DIR}/PlainPing/PlainPing.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveKit/ReactiveKit.framework",
 				"${BUILT_PRODUCTS_DIR}/macOSThemeKit/macOSThemeKit.framework",
@@ -451,6 +441,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bond.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differ.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OGSwitch.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlainPing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/macOSThemeKit.framework",
@@ -556,7 +547,6 @@
 				7AD34227206A3CF7009F2479 /* Indicator.swift in Sources */,
 				7AD34237206A80ED009F2479 /* Setting.swift in Sources */,
 				7AD34253206BBC48009F2479 /* GeneralViewController.swift in Sources */,
-				7A195334205F97100014DE06 /* DotMatrixView.swift in Sources */,
 				7AD34251206BBC3A009F2479 /* GeneralSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

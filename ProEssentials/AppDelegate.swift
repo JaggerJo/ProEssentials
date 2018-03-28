@@ -33,7 +33,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func applyTheme() {
         if SettingsManager().loadOrFallback(type: GeneralSettings.self).useDarkMode {
-            //ThemeManager.darkTheme.apply()
+            ThemeManager.darkTheme.apply()
+        }
+        else {
+            ThemeManager.lightTheme.apply()
         }
     }
 }

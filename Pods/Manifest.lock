@@ -4,21 +4,24 @@ PODS:
     - ReactiveKit (~> 3.8)
   - Differ (1.0.3)
   - macOSThemeKit (1.1.1)
+  - OGSwitch (1.0)
   - PlainPing (0.5)
   - ReactiveKit (3.9.1)
 
 DEPENDENCIES:
   - Bond
   - macOSThemeKit (~> 1.1.0)
+  - OGSwitch
   - PlainPing
 
 SPEC CHECKSUMS:
   Bond: d83b0b693578429a285eec2c46a829ea24831604
   Differ: 0c220ac75542f5f17f91b1303b85bf07d871ecd7
   macOSThemeKit: b21b1dca8dc564470d224425e06c8a9397608891
+  OGSwitch: 8874954f408834e8b7f9d8e69bcfa7ad6fd270fa
   PlainPing: 6b248b94d92be7ec0410952d1b09af43b9a39015
   ReactiveKit: 472aeba0d3ae838d8b813cce62b42d4b29368f2c
 
-PODFILE CHECKSUM: ba5ee94c4e089d9c8c33275e38751a9af916340a
+PODFILE CHECKSUM: ebde4841bb6aed739055df99ba082aab6e55c6b5
 
 COCOAPODS: 1.4.0

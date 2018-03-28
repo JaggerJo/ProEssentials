@@ -2,8 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -685,8 +685,8 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Pro Essentials" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="preferred" titleVisibility="hidden" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+                    <window key="window" title="Pro Essentials" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="preferred" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -737,7 +737,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="269"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-8c-imd">
+                            <visualEffectView appearanceType="vibrantLight" blendingMode="behindWindow" material="light" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-8c-imd">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="269"/>
                                 <subviews>
                                     <containerView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miP-W3-5T6">
@@ -759,6 +759,10 @@
                             <constraint firstAttribute="trailing" secondItem="M4S-8c-imd" secondAttribute="trailing" id="bg2-Tt-fG4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mainContainerView" destination="miP-W3-5T6" id="VfS-0X-y0g"/>
+                        <outlet property="mainVisualEffectView" destination="M4S-8c-imd" id="YMQ-FM-EHx"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -767,45 +771,45 @@
         <!--General-->
         <scene sceneID="bVb-kT-aAI">
             <objects>
-                <viewController title="General" id="25a-yS-5JN" customClass="GeneralViewController" customModule="ProEssentials" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="General" storyboardIdentifier="GeneralViewController" id="25a-yS-5JN" customClass="GeneralViewController" customModule="ProEssentials" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="76S-lf-Iah">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="438" height="286"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="inw-5f-aWZ">
-                                <rect key="frame" x="139" y="256" width="173" height="24"/>
-                                <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nut-4C-240">
-                                        <rect key="frame" x="-2" y="4" width="50" height="17"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Theme:" id="fuD-ss-QrU">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iYP-jl-KeE">
-                                        <rect key="frame" x="52" y="3" width="123" height="18"/>
-                                        <buttonCell key="cell" type="check" title="Use Dark Theme" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="EVV-Gq-7uj">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
-                                </subviews>
+                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iYP-jl-KeE">
+                                <rect key="frame" x="177" y="244" width="123" height="24"/>
                                 <constraints>
-                                    <constraint firstItem="Nut-4C-240" firstAttribute="centerY" secondItem="inw-5f-aWZ" secondAttribute="centerY" id="BlU-ih-rUf"/>
-                                    <constraint firstAttribute="height" constant="24" id="XlV-7a-mlu"/>
-                                    <constraint firstItem="iYP-jl-KeE" firstAttribute="centerY" secondItem="inw-5f-aWZ" secondAttribute="centerY" id="yWQ-SM-fZB"/>
+                                    <constraint firstAttribute="height" constant="20" id="eGz-C7-j81"/>
                                 </constraints>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
+                                <buttonCell key="cell" type="check" title="Use Dark Theme" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="EVV-Gq-7uj">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nut-4C-240">
+                                <rect key="frame" x="123" y="246" width="50" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="6Sm-Ur-yDn"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="hMO-IB-pEu"/>
+                                    <constraint firstAttribute="width" secondItem="Nut-4C-240" secondAttribute="height" multiplier="23:10" id="ve3-Og-TJI"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Theme:" id="fuD-ss-QrU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDn-qE-7Zg" customClass="OGSwitch" customModule="OGSwitch">
+                                <rect key="frame" x="179" y="221" width="26" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="tmu-rN-CaD"/>
+                                </constraints>
+                            </customView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="Nut-4C-240" firstAttribute="top" secondItem="76S-lf-Iah" secondAttribute="top" constant="20" id="6V8-jS-VE5"/>
+                            <constraint firstItem="iYP-jl-KeE" firstAttribute="top" secondItem="76S-lf-Iah" secondAttribute="top" constant="20" id="hnj-4o-cOY"/>
+                        </constraints>
                         <shadow key="shadow">
                             <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </shadow>
@@ -816,15 +820,25 @@
                 </viewController>
                 <customObject id="RMA-Wb-DJt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1008" y="532"/>
+            <point key="canvasLocation" x="1002" y="525"/>
         </scene>
         <!--Indicators-->
         <scene sceneID="6Bj-6W-dWC">
             <objects>
-                <viewController title="Indicators" id="kgh-2e-IEg" sceneMemberID="viewController">
+                <viewController title="Indicators" storyboardIdentifier="IndicatorsViewController" id="kgh-2e-IEg" sceneMemberID="viewController">
                     <view key="view" id="vha-EK-0Gm">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oew-2y-Wvc">
+                                <rect key="frame" x="71" y="229" width="81" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="M3C-bj-Ej9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="mrd-mg-aNP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
