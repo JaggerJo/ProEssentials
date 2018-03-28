@@ -4,6 +4,7 @@ target 'ProEssentials' do
   use_frameworks!
   pod 'macOSThemeKit', '~> 1.1.0'
   pod "PlainPing"
+  pod "Bond"
 
   target 'ProEssentialsTests' do
     inherit! :search_paths

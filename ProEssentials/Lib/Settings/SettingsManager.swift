@@ -55,6 +55,11 @@ public class SettingsManager {
         let path = settingsFolder
             .appendingPathComponent((T.init() as T).filename)
         
+        try FileManager.default.createDirectory(
+            at: settingsFolder,
+            withIntermediateDirectories: true,
+            attributes: nil)
+        
         let json = try? JSONEncoder().encode(setting);
         if json == nil {
             return; // TODO: throw instead

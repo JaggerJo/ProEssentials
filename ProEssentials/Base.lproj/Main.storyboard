@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -678,17 +679,44 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-125" y="-10"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                    <window key="window" title="Pro Essentials" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="preferred" titleVisibility="hidden" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <toolbar key="toolbar" implicitIdentifier="FA0E89F2-F3B3-46F0-A9B4-66215A9699CA" autosavesConfiguration="NO" allowsUserCustomization="NO" displayMode="iconAndLabel" sizeMode="regular" id="xPo-KE-OsN">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="B28B4135-74CF-42AC-9F76-D6026D2D6938" label="Custom View" paletteLabel="Custom View" id="ofd-XX-UgN">
+                                    <nil key="toolTip"/>
+                                    <size key="minSize" width="70" height="22"/>
+                                    <size key="maxSize" width="206" height="27"/>
+                                    <segmentedControl key="view" verticalHuggingPriority="750" id="MLg-OP-r3B">
+                                        <rect key="frame" x="0.0" y="14" width="165" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="roundRect" trackingMode="selectOne" id="0Nq-8N-YZt">
+                                            <font key="font" metaFont="cellTitle"/>
+                                            <segments>
+                                                <segment label="General" width="80"/>
+                                                <segment label="Indicators" width="79" selected="YES" tag="1"/>
+                                            </segments>
+                                        </segmentedCell>
+                                    </segmentedControl>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="MB0-Y5-VuT"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="MB0-Y5-VuT"/>
+                                <toolbarItem reference="ofd-XX-UgN"/>
+                                <toolbarItem reference="MB0-Y5-VuT"/>
+                            </defaultToolbarItems>
+                        </toolbar>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -699,66 +727,109 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-116" y="266"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="ProEssentials" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="269"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohj-ST-Ozb">
-                                <rect key="frame" x="364" y="237" width="96" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="tT8-7L-HQX">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </searchFieldCell>
-                            </searchField>
-                            <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rao-cn-UAZ">
-                                <rect key="frame" x="8" y="37" width="459" height="206"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <font key="font" metaFont="system"/>
-                                <tabViewItems>
-                                    <tabViewItem label="Tab" identifier="" id="V8Z-Lo-6XQ">
-                                        <view key="view" ambiguous="YES" id="HiR-WK-G2i">
-                                            <rect key="frame" x="10" y="33" width="439" height="160"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </view>
-                                    </tabViewItem>
-                                    <tabViewItem label="View" identifier="" id="ECz-ie-FBJ">
-                                        <view key="view" id="gFs-bD-j0q">
-                                            <rect key="frame" x="10" y="33" width="439" height="160"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        </view>
-                                    </tabViewItem>
-                                </tabViewItems>
-                            </tabView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="unt-rY-Vd5">
-                                <rect key="frame" x="385" y="5" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WK1-9O-ova">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6mS-PT-rRa">
-                                <rect key="frame" x="304" y="5" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hhd-e5-MxN">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
+                            <visualEffectView appearanceType="vibrantDark" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-8c-imd">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="269"/>
+                                <subviews>
+                                    <containerView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miP-W3-5T6">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="269"/>
+                                    </containerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="miP-W3-5T6" secondAttribute="bottom" id="2hv-x5-C1e"/>
+                                    <constraint firstItem="miP-W3-5T6" firstAttribute="leading" secondItem="M4S-8c-imd" secondAttribute="leading" id="XlQ-c1-NhM"/>
+                                    <constraint firstAttribute="trailing" secondItem="miP-W3-5T6" secondAttribute="trailing" id="h5z-tE-K2K"/>
+                                    <constraint firstItem="miP-W3-5T6" firstAttribute="top" secondItem="M4S-8c-imd" secondAttribute="top" id="uC9-xe-ia0"/>
+                                </constraints>
+                            </visualEffectView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="M4S-8c-imd" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="8Uk-fU-qx6"/>
+                            <constraint firstItem="M4S-8c-imd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="9Ba-QH-FSZ"/>
+                            <constraint firstAttribute="bottom" secondItem="M4S-8c-imd" secondAttribute="bottom" id="IUY-Cm-4Vl"/>
+                            <constraint firstAttribute="trailing" secondItem="M4S-8c-imd" secondAttribute="trailing" id="bg2-Tt-fG4"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="-116" y="658.5"/>
+        </scene>
+        <!--General-->
+        <scene sceneID="bVb-kT-aAI">
+            <objects>
+                <viewController title="General" id="25a-yS-5JN" customClass="GeneralViewController" customModule="ProEssentials" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="76S-lf-Iah">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" ambiguous="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="inw-5f-aWZ">
+                                <rect key="frame" x="139" y="256" width="173" height="24"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Nut-4C-240">
+                                        <rect key="frame" x="-2" y="4" width="50" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Theme:" id="fuD-ss-QrU">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iYP-jl-KeE">
+                                        <rect key="frame" x="52" y="3" width="123" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Use Dark Theme" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="EVV-Gq-7uj">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Nut-4C-240" firstAttribute="centerY" secondItem="inw-5f-aWZ" secondAttribute="centerY" id="BlU-ih-rUf"/>
+                                    <constraint firstAttribute="height" constant="24" id="XlV-7a-mlu"/>
+                                    <constraint firstItem="iYP-jl-KeE" firstAttribute="centerY" secondItem="inw-5f-aWZ" secondAttribute="centerY" id="yWQ-SM-fZB"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <shadow key="shadow">
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </shadow>
+                    </view>
+                    <connections>
+                        <outlet property="useDarkThemeBtn" destination="iYP-jl-KeE" id="QGg-TI-49u"/>
+                    </connections>
+                </viewController>
+                <customObject id="RMA-Wb-DJt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="532"/>
+        </scene>
+        <!--Indicators-->
+        <scene sceneID="6Bj-6W-dWC">
+            <objects>
+                <viewController title="Indicators" id="kgh-2e-IEg" sceneMemberID="viewController">
+                    <view key="view" id="vha-EK-0Gm">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="mrd-mg-aNP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="898"/>
         </scene>
     </scenes>
 </document>

@@ -9,12 +9,12 @@
 import Foundation
 
 public class InternetIndicatorSettings : Setting {
-    public let filename: String = "internet_indicator_settings.json"
+    public var filename: String = "internet_indicator_settings.json"
     
-    public let host: String;
-    public let pingInterval: Double;
-    public let pingTimeout: Double;
-    public let showNotifications: Bool;
+    public var host: String;
+    public var pingInterval: Double;
+    public var pingTimeout: Double;
+    public var showNotifications: Bool;
     
     required public init() {
         host = "google.com"

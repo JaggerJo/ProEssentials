@@ -15,15 +15,13 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSUserNotificationCenter.default.delegate = self
-        ThemeManager.darkTheme.apply()
+        applyTheme()
         createIndicators()
     }
 
-    
     func userNotificationCenter(_ center: NSUserNotificationCenter, shouldPresent notification: NSUserNotification) -> Bool {
         return true
     }
-    
     
     func createIndicators() {
         internetIndicator.create()
@@ -31,5 +29,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
 
     func applicationWillTerminate(_ aNotification: Notification) {
         internetIndicator.destroy()
+    }
+    
+    func applyTheme() {
+        if SettingsManager().loadOrFallback(type: GeneralSettings.self).useDarkMode {
+            //ThemeManager.darkTheme.apply()
+        }
     }
 }
