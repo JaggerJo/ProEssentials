@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import macOSThemeKit
 
 class ViewController: NSViewController {
     var segmentedControlCurrentIndex: Int = 0
@@ -21,16 +22,7 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let darkMode = SettingsManager().loadOrFallback(type: GeneralSettings.self).useDarkMode
-        
-        mainVisualEffectView.material = darkMode
-            ? .dark
-            : .light
-        
-        mainVisualEffectView.appearance = darkMode
-            ? NSAppearance(named: .vibrantDark)
-            : NSAppearance(named: .vibrantLight)
+        applyTheme()
     }
     
     override func viewDidLayout() {
@@ -44,6 +36,37 @@ class ViewController: NSViewController {
         }
     }
     
+    func applyTheme() {
+        let generalSettings = SettingsManager().loadOrFallback(type: GeneralSettings.self)
+        
+        switch generalSettings.theme {
+            case .dark:
+                mainVisualEffectView.material = .dark
+                mainVisualEffectView.appearance = NSAppearance(named: .vibrantDark)
+                break
+            case .light:
+                mainVisualEffectView.material = .light
+                mainVisualEffectView.appearance = NSAppearance(named: .vibrantLight)
+                break
+            case .system:
+                switch ThemeManager.systemTheme.isDarkTheme {
+                    case true:
+                        mainVisualEffectView.material = .dark
+                        mainVisualEffectView.appearance = NSAppearance(named: .vibrantDark)
+                        break
+                    case false:
+                        mainVisualEffectView.material = .light
+                        mainVisualEffectView.appearance = NSAppearance(named: .vibrantLight)
+                        break
+                }
+                break
+        }
+        
+        mainVisualEffectView.state = generalSettings.transcluent
+            ? .active
+            : .inactive
+    }
+    
     func setupTabs() {
         if let window = view.window {
             let toolbarItem = window.toolbar?.items.item(at: 1)
@@ -51,6 +74,8 @@ class ViewController: NSViewController {
             
             segmentedControl.action = #selector(self.segmentedViewAction)
         }
+        
+        showTab(withIndex: 0)
     }
     
     @objc
@@ -76,7 +101,14 @@ class ViewController: NSViewController {
         let viewController = storyboard.instantiateController(withIdentifier: sceneIdentifier) as! NSViewController
         
         addChildViewController(viewController)
-        viewController.view.frame = mainContainerView.bounds
+        
+        var windowFrame = view.window?.frame
+        windowFrame?.size.width = viewController.view.frame.width
+        windowFrame?.size.height = viewController.view.frame.height
+        
+        
+        self.view.window?.setFrame(windowFrame!, display: true)
+        //viewController.view.frame = mainContainerView.bounds
         mainContainerView.subviews.removeAll()
         mainContainerView.addSubview(viewController.view)
     }

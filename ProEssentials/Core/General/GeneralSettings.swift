@@ -11,9 +11,19 @@ import Foundation
 class GeneralSettings : Setting {
     public var filename: String = "general_settings.json"
     
-    public var useDarkMode: Bool
+    public var theme: ApplicationTheme
+    public var transcluent: Bool
     
     required public init() {
-        useDarkMode = false
+        theme = .light
+        transcluent = false
     }
 }
+
+enum ApplicationTheme : String, Codable {
+    case light
+    case dark
+    case system
+}
+
+

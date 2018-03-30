@@ -24,20 +24,18 @@ class GeneralViewController : NSViewController {
     func loadSettings() {
         settings = SettingsManager().loadOrFallback(type: GeneralSettings.self)
         
-        useDarkThemeBtn.state = settings?.useDarkMode == true
-            ? .on
-            : .off
+        //useDarkThemeBtn.state = settings?.useDarkMode == true
+        //    ? .on
+        //    : .off
     }
     
     func setupBindings() {
         _ = useDarkThemeBtn.reactive.controlEvent.observe(with: {
             event in
         
-            self.settings?.useDarkMode = event.element?.state == .on
-                ? true
-                : false
-            
-            print(self.settings?.useDarkMode ?? "undefined")
+            //self.settings?.useDarkMode = event.element?.state == .on
+            //    ? true
+            //    : false
             
             do {
                 try SettingsManager().save(setting: self.settings!)
