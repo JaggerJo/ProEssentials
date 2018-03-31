@@ -12,7 +12,7 @@ import macOSThemeKit
 class ViewController: NSViewController {
     var segmentedControlCurrentIndex: Int = 0
     var segmentedControlViewControllerNames = [
-        "GeneralViewController",
+        String(describing: GeneralViewController.self),
         "IndicatorsViewController"
     ]
     
@@ -26,14 +26,8 @@ class ViewController: NSViewController {
     }
     
     override func viewDidLayout() {
-        super.viewDidLayout()
         view.window?.isOpaque = false
         setupTabs()
-        
-        for childViewController in childViewControllers {
-            childViewController.view.frame = mainContainerView.bounds
-            childViewController.viewDidLayout()
-        }
     }
     
     func applyTheme() {
@@ -95,21 +89,15 @@ class ViewController: NSViewController {
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
         let name = segmentedControlViewControllerNames.item(at: index)
         
-        print("navigating to '\(name)'")
-        
         let sceneIdentifier = NSStoryboard.SceneIdentifier(rawValue: name)
         let viewController = storyboard.instantiateController(withIdentifier: sceneIdentifier) as! NSViewController
         
-        addChildViewController(viewController)
-        
-        var windowFrame = view.window?.frame
-        windowFrame?.size.width = viewController.view.frame.width
-        windowFrame?.size.height = viewController.view.frame.height
-        
-        
-        self.view.window?.setFrame(windowFrame!, display: true)
-        //viewController.view.frame = mainContainerView.bounds
         mainContainerView.subviews.removeAll()
+        
+        addChildViewController(viewController)
+        viewController.view.frame = mainContainerView.bounds
+        //viewController.view.autoresizingMask = .none
+        
         mainContainerView.addSubview(viewController.view)
     }
 }
