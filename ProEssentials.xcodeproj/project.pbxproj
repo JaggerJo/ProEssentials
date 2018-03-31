@@ -15,12 +15,12 @@
 		7AD34224206A3C25009F2479 /* InternetIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34223206A3C25009F2479 /* InternetIndicator.swift */; };
 		7AD34227206A3CF7009F2479 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34226206A3CF7009F2479 /* Indicator.swift */; };
 		7AD3422D206A798F009F2479 /* InternetIndicatorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3422C206A798F009F2479 /* InternetIndicatorSettings.swift */; };
-		7AD34235206A7C67009F2479 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34234206A7C67009F2479 /* SettingsManager.swift */; };
-		7AD34237206A80ED009F2479 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34236206A80ED009F2479 /* Setting.swift */; };
 		7AD34251206BBC3A009F2479 /* GeneralSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34250206BBC3A009F2479 /* GeneralSettings.swift */; };
 		7AD34253206BBC48009F2479 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34252206BBC48009F2479 /* GeneralViewController.swift */; };
 		7AD34257206BBFD5009F2479 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34256206BBFD5009F2479 /* ViewController.swift */; };
 		7AF36C32206FD54000DAF61D /* IndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF36C31206FD54000DAF61D /* IndicatorsViewController.swift */; };
+		7AF36C34206FE07F00DAF61D /* InternetIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF36C33206FE07F00DAF61D /* InternetIndicatorViewController.swift */; };
+		7AF36C81206FE79100DAF61D /* ProEssentials_Lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF36C77206FE36500DAF61D /* ProEssentials_Lib.framework */; };
 		FE44627EF27154BA1BAAAEDB /* Pods_ProEssentialsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91FA5981F5D51057B1CD2F1 /* Pods_ProEssentialsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +81,20 @@
 			remoteGlobalIDString = 25330699CFBCC0B4B11C1BC736F18034;
 			remoteInfo = ReactiveKit;
 		};
+		7AF36C76206FE36500DAF61D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AF36C71206FE36400DAF61D /* ProEssentials.Lib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7AF36C57206FE36400DAF61D;
+			remoteInfo = ProEssentials.Lib;
+		};
+		7AF36C78206FE36500DAF61D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AF36C71206FE36400DAF61D /* ProEssentials.Lib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7AF36C60206FE36400DAF61D;
+			remoteInfo = ProEssentials.LibTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -99,12 +113,12 @@
 		7AD34223206A3C25009F2479 /* InternetIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetIndicator.swift; sourceTree = "<group>"; };
 		7AD34226206A3CF7009F2479 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		7AD3422C206A798F009F2479 /* InternetIndicatorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetIndicatorSettings.swift; sourceTree = "<group>"; };
-		7AD34234206A7C67009F2479 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
-		7AD34236206A80ED009F2479 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		7AD34250206BBC3A009F2479 /* GeneralSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettings.swift; sourceTree = "<group>"; };
 		7AD34252206BBC48009F2479 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		7AD34256206BBFD5009F2479 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7AF36C31206FD54000DAF61D /* IndicatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsViewController.swift; sourceTree = "<group>"; };
+		7AF36C33206FE07F00DAF61D /* InternetIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetIndicatorViewController.swift; sourceTree = "<group>"; };
+		7AF36C71206FE36400DAF61D /* ProEssentials.Lib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProEssentials.Lib.xcodeproj; path = ProEssentials.Lib/ProEssentials.Lib.xcodeproj; sourceTree = "<group>"; };
 		B91FA5981F5D51057B1CD2F1 /* Pods_ProEssentialsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProEssentialsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96B941E19651F04D47C7DDA /* Pods-ProEssentials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProEssentials.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProEssentials/Pods-ProEssentials.debug.xcconfig"; sourceTree = "<group>"; };
 		F022AC9E1A76EF6D2A3E7013 /* Pods-ProEssentialsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProEssentialsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProEssentialsTests/Pods-ProEssentialsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01161FD9B4B70594C1AA3482 /* Pods_ProEssentials.framework in Frameworks */,
+				7AF36C81206FE79100DAF61D /* ProEssentials_Lib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +160,6 @@
 			children = (
 				7AD34220206A3BC1009F2479 /* Internet */,
 				7AD34226206A3CF7009F2479 /* Indicator.swift */,
-				7AF36C31206FD54000DAF61D /* IndicatorsViewController.swift */,
 			);
 			path = Indicators;
 			sourceTree = "<group>";
@@ -153,6 +167,7 @@
 		7A31EF7B205E78FB00EB0F01 = {
 			isa = PBXGroup;
 			children = (
+				7AF36C71206FE36400DAF61D /* ProEssentials.Lib.xcodeproj */,
 				7A31EF86205E78FB00EB0F01 /* ProEssentials */,
 				7A31EF99205E78FB00EB0F01 /* ProEssentialsTests */,
 				7A31EF85205E78FB00EB0F01 /* Products */,
@@ -174,7 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				7AD3424E206BBC20009F2479 /* Core */,
-				7AD34229206A670C009F2479 /* Lib */,
 				7A31EFA5205EA11300EB0F01 /* Pods.xcodeproj */,
 				7A31EF87205E78FB00EB0F01 /* AppDelegate.swift */,
 				7A31EF8B205E78FB00EB0F01 /* Assets.xcassets */,
@@ -212,45 +226,63 @@
 			isa = PBXGroup;
 			children = (
 				7AD34223206A3C25009F2479 /* InternetIndicator.swift */,
-				7AD3422C206A798F009F2479 /* InternetIndicatorSettings.swift */,
 			);
 			path = Internet;
-			sourceTree = "<group>";
-		};
-		7AD34229206A670C009F2479 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				7AD34238206B9876009F2479 /* Settings */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		7AD34238206B9876009F2479 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				7AD34236206A80ED009F2479 /* Setting.swift */,
-				7AD34234206A7C67009F2479 /* SettingsManager.swift */,
-			);
-			path = Settings;
 			sourceTree = "<group>";
 		};
 		7AD3424E206BBC20009F2479 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7AF36C35206FE10700DAF61D /* UI */,
 				7A19532F205F96D60014DE06 /* Indicators */,
-				7AD34256206BBFD5009F2479 /* ViewController.swift */,
-				7AD3424F206BBC2B009F2479 /* General */,
+				7AD3424F206BBC2B009F2479 /* Settings */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		7AD3424F206BBC2B009F2479 /* General */ = {
+		7AD3424F206BBC2B009F2479 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				7AD3422C206A798F009F2479 /* InternetIndicatorSettings.swift */,
 				7AD34250206BBC3A009F2479 /* GeneralSettings.swift */,
-				7AD34252206BBC48009F2479 /* GeneralViewController.swift */,
 			);
-			path = General;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7AF36C35206FE10700DAF61D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7AF36C36206FE10F00DAF61D /* ViewControllers */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		7AF36C36206FE10F00DAF61D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7AD34256206BBFD5009F2479 /* ViewController.swift */,
+				7AD34252206BBC48009F2479 /* GeneralViewController.swift */,
+				7AF36C37206FE13B00DAF61D /* Indicators */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7AF36C37206FE13B00DAF61D /* Indicators */ = {
+			isa = PBXGroup;
+			children = (
+				7AF36C31206FD54000DAF61D /* IndicatorsViewController.swift */,
+				7AF36C33206FE07F00DAF61D /* InternetIndicatorViewController.swift */,
+			);
+			path = Indicators;
+			sourceTree = "<group>";
+		};
+		7AF36C72206FE36400DAF61D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AF36C77206FE36500DAF61D /* ProEssentials_Lib.framework */,
+				7AF36C79206FE36500DAF61D /* ProEssentials.LibTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A36CBBD0F6EB32C873079A53 /* Pods */ = {
@@ -345,6 +377,10 @@
 					ProductGroup = 7A31EFA6205EA11300EB0F01 /* Products */;
 					ProjectRef = 7A31EFA5205EA11300EB0F01 /* Pods.xcodeproj */;
 				},
+				{
+					ProductGroup = 7AF36C72206FE36400DAF61D /* Products */;
+					ProjectRef = 7AF36C71206FE36400DAF61D /* ProEssentials.Lib.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -402,6 +438,20 @@
 			fileType = wrapper.framework;
 			path = ReactiveKit.framework;
 			remoteRef = 7AD3424B206BBBE1009F2479 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7AF36C77206FE36500DAF61D /* ProEssentials_Lib.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ProEssentials_Lib.framework;
+			remoteRef = 7AF36C76206FE36500DAF61D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7AF36C79206FE36500DAF61D /* ProEssentials.LibTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ProEssentials.LibTests.xctest;
+			remoteRef = 7AF36C78206FE36500DAF61D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -543,11 +593,10 @@
 				7AD34257206BBFD5009F2479 /* ViewController.swift in Sources */,
 				7AD34224206A3C25009F2479 /* InternetIndicator.swift in Sources */,
 				7A31EF88205E78FB00EB0F01 /* AppDelegate.swift in Sources */,
-				7AD34235206A7C67009F2479 /* SettingsManager.swift in Sources */,
 				7AF36C32206FD54000DAF61D /* IndicatorsViewController.swift in Sources */,
 				7AD3422D206A798F009F2479 /* InternetIndicatorSettings.swift in Sources */,
+				7AF36C34206FE07F00DAF61D /* InternetIndicatorViewController.swift in Sources */,
 				7AD34227206A3CF7009F2479 /* Indicator.swift in Sources */,
-				7AD34237206A80ED009F2479 /* Setting.swift in Sources */,
 				7AD34253206BBC48009F2479 /* GeneralViewController.swift in Sources */,
 				7AD34251206BBC3A009F2479 /* GeneralSettings.swift in Sources */,
 			);

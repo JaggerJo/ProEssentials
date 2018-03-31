@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ProEssentials_Lib
 
 public class InternetIndicatorSettings : Setting {
     public var filename: String = "internet_indicator_settings.json"

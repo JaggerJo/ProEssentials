@@ -8,6 +8,7 @@
 
 import Cocoa
 import macOSThemeKit
+import ProEssentials_Lib
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDelegate {

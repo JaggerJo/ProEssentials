@@ -9,6 +9,8 @@
 import Foundation
 import Cocoa
 import PlainPing
+import ProEssentials_Lib
+
 
 public class InternetIndicator : Indicator {
     private var indicator: NSStatusItem? = nil;

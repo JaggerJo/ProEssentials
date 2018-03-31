@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ProEssentials_Lib
 
 class GeneralSettings : Setting {
     public var filename: String = "general_settings.json"

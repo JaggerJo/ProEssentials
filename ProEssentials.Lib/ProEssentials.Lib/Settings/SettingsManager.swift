@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class SettingsManager {
+open class SettingsManager {
     public let settingsFolder: URL
     
     public init() {

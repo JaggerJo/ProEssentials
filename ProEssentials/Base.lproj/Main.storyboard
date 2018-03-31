@@ -821,7 +821,7 @@
         <!--Internet-->
         <scene sceneID="6Bj-6W-dWC">
             <objects>
-                <viewController title="Internet" storyboardIdentifier="InternetIndicatorViewController" id="kgh-2e-IEg" sceneMemberID="viewController">
+                <viewController title="Internet" storyboardIdentifier="InternetIndicatorViewController" id="kgh-2e-IEg" customClass="InternetIndicatorViewController" customModule="ProEssentials" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="vha-EK-0Gm">
                         <rect key="frame" x="0.0" y="0.0" width="405" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -938,12 +938,12 @@
                 </viewController>
                 <customObject id="mrd-mg-aNP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411.5" y="1459"/>
+            <point key="canvasLocation" x="587" y="1094"/>
         </scene>
         <!--Indicators View Controller-->
         <scene sceneID="FqL-Sb-iWT">
             <objects>
-                <tabViewController storyboardIdentifier="IndicatorsViewController" selectedTabViewItemIndex="0" id="SIN-XE-IGG" customClass="IndicatorsViewController" customModule="ProEssentials" customModuleProvider="target" sceneMemberID="viewController">
+                <tabViewController storyboardIdentifier="IndicatorsViewController" selectedTabViewItemIndex="2" id="SIN-XE-IGG" customClass="IndicatorsViewController" customModule="ProEssentials" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem id="QY7-tB-RaC">
                             <userDefinedRuntimeAttributes>
@@ -952,6 +952,8 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </tabViewItem>
+                        <tabViewItem id="VKv-o6-NOB"/>
+                        <tabViewItem id="a2G-uV-o56"/>
                     </tabViewItems>
                     <tabView key="tabView" autoresizesSubviews="NO" misplaced="YES" type="noTabsNoBorder" id="TEB-56-PKW">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
@@ -965,11 +967,39 @@
                     <connections>
                         <outlet property="tabView" destination="TEB-56-PKW" id="Bic-c3-PKE"/>
                         <segue destination="kgh-2e-IEg" kind="relationship" relationship="tabItems" id="RD9-Kw-tKP"/>
+                        <segue destination="ArS-rR-S1e" kind="relationship" relationship="tabItems" id="XkF-A2-BNS"/>
+                        <segue destination="lsu-ye-4os" kind="relationship" relationship="tabItems" id="PdV-6y-hAh"/>
                     </connections>
                 </tabViewController>
                 <customObject id="LF6-0a-UhG" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-116" y="1459"/>
+        </scene>
+        <!--CPU-->
+        <scene sceneID="TA9-Mb-brb">
+            <objects>
+                <viewController title="CPU" id="ArS-rR-S1e" sceneMemberID="viewController">
+                    <view key="view" id="NGO-f5-8Be">
+                        <rect key="frame" x="0.0" y="0.0" width="405" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="2sc-xM-3R3" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586.5" y="1459"/>
+        </scene>
+        <!--Network-->
+        <scene sceneID="9ll-4m-gJr">
+            <objects>
+                <viewController title="Network" id="lsu-ye-4os" sceneMemberID="viewController">
+                    <view key="view" id="58W-YC-Axb">
+                        <rect key="frame" x="0.0" y="0.0" width="405" height="293"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="7PK-Be-AvI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="586.5" y="1820.5"/>
         </scene>
     </scenes>
 </document>

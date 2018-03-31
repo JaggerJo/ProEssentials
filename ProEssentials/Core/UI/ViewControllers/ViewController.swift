@@ -8,6 +8,7 @@
 
 import Cocoa
 import macOSThemeKit
+import ProEssentials_Lib
 
 class ViewController: NSViewController {
     var segmentedControlCurrentIndex: Int = 0

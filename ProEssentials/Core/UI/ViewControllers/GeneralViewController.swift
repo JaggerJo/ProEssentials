@@ -10,6 +10,7 @@ import Foundation
 import Cocoa
 import Bond
 import ReactiveKit
+import ProEssentials_Lib
 
 class GeneralViewController : NSViewController {
     public var settings: GeneralSettings?
