@@ -20,6 +20,7 @@
 		7AD34251206BBC3A009F2479 /* GeneralSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34250206BBC3A009F2479 /* GeneralSettings.swift */; };
 		7AD34253206BBC48009F2479 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34252206BBC48009F2479 /* GeneralViewController.swift */; };
 		7AD34257206BBFD5009F2479 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34256206BBFD5009F2479 /* ViewController.swift */; };
+		7AF36C32206FD54000DAF61D /* IndicatorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF36C31206FD54000DAF61D /* IndicatorsViewController.swift */; };
 		FE44627EF27154BA1BAAAEDB /* Pods_ProEssentialsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91FA5981F5D51057B1CD2F1 /* Pods_ProEssentialsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		7AD34250206BBC3A009F2479 /* GeneralSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettings.swift; sourceTree = "<group>"; };
 		7AD34252206BBC48009F2479 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		7AD34256206BBFD5009F2479 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7AF36C31206FD54000DAF61D /* IndicatorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorsViewController.swift; sourceTree = "<group>"; };
 		B91FA5981F5D51057B1CD2F1 /* Pods_ProEssentialsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProEssentialsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C96B941E19651F04D47C7DDA /* Pods-ProEssentials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProEssentials.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProEssentials/Pods-ProEssentials.debug.xcconfig"; sourceTree = "<group>"; };
 		F022AC9E1A76EF6D2A3E7013 /* Pods-ProEssentialsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProEssentialsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProEssentialsTests/Pods-ProEssentialsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				7AD34220206A3BC1009F2479 /* Internet */,
 				7AD34226206A3CF7009F2479 /* Indicator.swift */,
+				7AF36C31206FD54000DAF61D /* IndicatorsViewController.swift */,
 			);
 			path = Indicators;
 			sourceTree = "<group>";
@@ -172,7 +175,6 @@
 			children = (
 				7AD3424E206BBC20009F2479 /* Core */,
 				7AD34229206A670C009F2479 /* Lib */,
-				7A19532F205F96D60014DE06 /* Indicators */,
 				7A31EFA5205EA11300EB0F01 /* Pods.xcodeproj */,
 				7A31EF87205E78FB00EB0F01 /* AppDelegate.swift */,
 				7A31EF8B205E78FB00EB0F01 /* Assets.xcassets */,
@@ -235,6 +237,7 @@
 		7AD3424E206BBC20009F2479 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7A19532F205F96D60014DE06 /* Indicators */,
 				7AD34256206BBFD5009F2479 /* ViewController.swift */,
 				7AD3424F206BBC2B009F2479 /* General */,
 			);
@@ -541,6 +544,7 @@
 				7AD34224206A3C25009F2479 /* InternetIndicator.swift in Sources */,
 				7A31EF88205E78FB00EB0F01 /* AppDelegate.swift in Sources */,
 				7AD34235206A7C67009F2479 /* SettingsManager.swift in Sources */,
+				7AF36C32206FD54000DAF61D /* IndicatorsViewController.swift in Sources */,
 				7AD3422D206A798F009F2479 /* InternetIndicatorSettings.swift in Sources */,
 				7AD34227206A3CF7009F2479 /* Indicator.swift in Sources */,
 				7AD34237206A80ED009F2479 /* Setting.swift in Sources */,

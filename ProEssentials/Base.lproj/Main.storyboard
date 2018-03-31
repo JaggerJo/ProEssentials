@@ -710,12 +710,13 @@
                                         </segmentedCell>
                                     </segmentedControl>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="MB0-Y5-VuT"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="92g-hx-ynM"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="S91-QC-jZF"/>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="MB0-Y5-VuT"/>
+                                <toolbarItem reference="92g-hx-ynM"/>
+                                <toolbarItem reference="92g-hx-ynM"/>
                                 <toolbarItem reference="ofd-XX-UgN"/>
-                                <toolbarItem reference="MB0-Y5-VuT"/>
                             </defaultToolbarItems>
                         </toolbar>
                         <connections>
@@ -728,7 +729,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-116" y="160.5"/>
+            <point key="canvasLocation" x="-116" y="291"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -741,7 +742,7 @@
                             <visualEffectView appearanceType="vibrantLight" blendingMode="behindWindow" material="light" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="M4S-8c-imd">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                                 <subviews>
-                                    <containerView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miP-W3-5T6">
+                                    <containerView autoresizesSubviews="NO" wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="miP-W3-5T6">
                                         <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                                     </containerView>
                                 </subviews>
@@ -939,10 +940,10 @@
             </objects>
             <point key="canvasLocation" x="411.5" y="1459"/>
         </scene>
-        <!--Tab View Controller-->
+        <!--Indicators View Controller-->
         <scene sceneID="FqL-Sb-iWT">
             <objects>
-                <tabViewController storyboardIdentifier="IndicatorsViewController" selectedTabViewItemIndex="0" id="SIN-XE-IGG" sceneMemberID="viewController">
+                <tabViewController storyboardIdentifier="IndicatorsViewController" selectedTabViewItemIndex="0" id="SIN-XE-IGG" customClass="IndicatorsViewController" customModule="ProEssentials" customModuleProvider="target" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem id="QY7-tB-RaC">
                             <userDefinedRuntimeAttributes>

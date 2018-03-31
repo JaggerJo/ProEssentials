@@ -19,7 +19,6 @@ class ViewController: NSViewController {
     @IBOutlet var mainVisualEffectView: NSVisualEffectView!
     @IBOutlet var mainContainerView: NSView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         applyTheme()
@@ -63,7 +62,7 @@ class ViewController: NSViewController {
     
     func setupTabs() {
         if let window = view.window {
-            let toolbarItem = window.toolbar?.items.item(at: 1)
+            let toolbarItem = window.toolbar?.items.item(at: 2)
             let segmentedControl = toolbarItem?.view! as! NSSegmentedControl
             
             segmentedControl.action = #selector(self.segmentedViewAction)
@@ -76,7 +75,7 @@ class ViewController: NSViewController {
     func segmentedViewAction() {
         print("triggered")
         
-        let toolbarItem = view.window?.toolbar?.items.item(at: 1)
+        let toolbarItem = view.window?.toolbar?.items.item(at: 2)
         let segmentedControl = toolbarItem?.view! as! NSSegmentedControl
         
         if segmentedControl.selectedSegment != self.segmentedControlCurrentIndex {
@@ -96,7 +95,6 @@ class ViewController: NSViewController {
         
         addChildViewController(viewController)
         viewController.view.frame = mainContainerView.bounds
-        //viewController.view.autoresizingMask = .none
         
         mainContainerView.addSubview(viewController.view)
     }
