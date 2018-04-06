@@ -35,14 +35,17 @@ class ViewController: NSViewController {
         
         switch generalSettings.theme {
             case .dark:
+                ThemeManager.darkTheme.apply()
                 mainVisualEffectView.material = .dark
                 mainVisualEffectView.appearance = NSAppearance(named: .vibrantDark)
                 break
             case .light:
+                ThemeManager.lightTheme.apply()
                 mainVisualEffectView.material = .light
                 mainVisualEffectView.appearance = NSAppearance(named: .vibrantLight)
                 break
             case .system:
+                ThemeManager.systemTheme.apply()
                 switch ThemeManager.systemTheme.isDarkTheme {
                     case true:
                         mainVisualEffectView.material = .dark

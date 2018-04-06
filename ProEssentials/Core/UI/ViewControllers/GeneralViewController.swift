@@ -13,37 +13,49 @@ import ReactiveKit
 import ProEssentials_Lib
 
 class GeneralViewController : NSViewController {
-    public var settings: GeneralSettings?
-    
-    @IBOutlet var useDarkThemeBtn: NSButton!
+    @IBOutlet var transparentCheckbox: NSButton!
+    @IBOutlet var themeSegmentedButton: NSSegmentedControl!
     
     override func viewDidLoad() {
         loadSettings()
-        setupBindings()
     }
     
     func loadSettings() {
-        settings = SettingsManager().loadOrFallback(type: GeneralSettings.self)
+        let settings = SettingsManager().loadOrFallback(type: GeneralSettings.self)
         
-        //useDarkThemeBtn.state = settings?.useDarkMode == true
-        //    ? .on
-        //    : .off
+        // Theme Selection
+        themeSegmentedButton.setSelected(true, forSegment: settings.theme.toSegmentIndex())
+        _ = themeSegmentedButton.reactive.controlEvent { signal in
+            settings.theme = ApplicationTheme.fromSegmentIndex(index: signal.indexOfSelectedItem)
+        }
+        
+        // Theme Transparency
+        transparentCheckbox.state = settings.transcluent
+            ? .on
+            : .off
+        
+        _ = transparentCheckbox.reactive.controlEvent { signal in
+            settings.transcluent = signal.state == .on
+                ? true
+            : false
+        }
     }
-    
-    func setupBindings() {
-        _ = useDarkThemeBtn.reactive.controlEvent.observe(with: {
-            event in
-        
-            //self.settings?.useDarkMode = event.element?.state == .on
-            //    ? true
-            //    : false
-            
-            do {
-                try SettingsManager().save(setting: self.settings!)
-            }
-            catch {
-                print(error)
-            }
-        })
+}
+
+fileprivate extension ApplicationTheme {
+    func toSegmentIndex() -> Int {
+        switch self {
+            case .system:   return 0
+            case .dark:     return 1
+            case .light:    return 2
+        }
+    }
+    static func fromSegmentIndex(index: Int) -> ApplicationTheme {
+        switch index {
+            case 0:     return .system
+            case 1:     return .dark
+            case 2:     return .light
+            default:    return .system
+        }
     }
 }

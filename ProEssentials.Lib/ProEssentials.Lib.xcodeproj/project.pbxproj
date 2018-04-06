@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A81D9D3207266C60006E3D6 /* EventAggregator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81D9D2207266C60006E3D6 /* EventAggregator.swift */; };
 		7AF36C61206FE36400DAF61D /* ProEssentials_Lib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF36C57206FE36400DAF61D /* ProEssentials_Lib.framework */; };
 		7AF36C66206FE36400DAF61D /* ProEssentials_LibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF36C65206FE36400DAF61D /* ProEssentials_LibTests.swift */; };
 		7AF36C68206FE36400DAF61D /* ProEssentials_Lib.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AF36C5A206FE36400DAF61D /* ProEssentials_Lib.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A81D9D2207266C60006E3D6 /* EventAggregator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAggregator.swift; sourceTree = "<group>"; };
 		7AF36C57206FE36400DAF61D /* ProEssentials_Lib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProEssentials_Lib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF36C5A206FE36400DAF61D /* ProEssentials_Lib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProEssentials_Lib.h; sourceTree = "<group>"; };
 		7AF36C5B206FE36400DAF61D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A81D9D1207266AA0006E3D6 /* EventAggregator */ = {
+			isa = PBXGroup;
+			children = (
+				7A81D9D2207266C60006E3D6 /* EventAggregator.swift */,
+			);
+			path = EventAggregator;
+			sourceTree = "<group>";
+		};
 		7AF36C4D206FE36400DAF61D = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 		7AF36C59206FE36400DAF61D /* ProEssentials.Lib */ = {
 			isa = PBXGroup;
 			children = (
+				7A81D9D1207266AA0006E3D6 /* EventAggregator */,
 				7AF36C7C206FE3A300DAF61D /* Settings */,
 				7AF36C5A206FE36400DAF61D /* ProEssentials_Lib.h */,
 				7AF36C5B206FE36400DAF61D /* Info.plist */,
@@ -212,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AF36C80206FE43E00DAF61D /* Setting.swift in Sources */,
+				7A81D9D3207266C60006E3D6 /* EventAggregator.swift in Sources */,
 				7AF36C7F206FE43E00DAF61D /* SettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
