@@ -16,6 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSUserNotificationCenter.default.delegate = self
+        applyTheme()
         createIndicators()
     }
 
@@ -31,5 +32,19 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         internetIndicator.destroy()
     }
     
-
+    func applyTheme() {
+        let generalSettings = SettingsManager().loadOrFallback(type: GeneralSettings.self)
+        
+        switch generalSettings.theme {
+            case .dark:
+                ThemeManager.darkTheme.apply()
+                break
+            case .light:
+                ThemeManager.lightTheme.apply()
+                break
+            case .system:
+                ThemeManager.systemTheme.apply()
+                break
+        }
+    }
 }

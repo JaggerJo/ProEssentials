@@ -778,6 +778,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iYP-jl-KeE">
+                                <rect key="frame" x="187" y="258" width="123" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="eGz-C7-j81"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Use Dark Theme" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="EVV-Gq-7uj">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nut-4C-240">
                                 <rect key="frame" x="115" y="260" width="50" height="20"/>
                                 <constraints>
@@ -791,51 +801,17 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TBN-95-oEC">
-                                <rect key="frame" x="73" y="232" width="92" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="TBN-95-oEC" secondAttribute="height" multiplier="23:10" id="5OL-78-Q5w"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="aMQ-Ti-dAX"/>
-                                    <constraint firstAttribute="height" constant="20" id="tXE-KS-uaB"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Background:" id="bYg-On-3FL">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7E8-8d-ziw">
-                                <rect key="frame" x="177" y="234" width="95" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Transparent" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="EXE-BJ-ifa">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLf-dg-Rnc">
-                                <rect key="frame" x="177" y="258" width="184" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="b4K-U6-GTe">
-                                    <font key="font" metaFont="system"/>
-                                    <segments>
-                                        <segment label="System"/>
-                                        <segment label="Dark" selected="YES" tag="1"/>
-                                        <segment label="Light"/>
-                                    </segments>
-                                </segmentedCell>
-                            </segmentedControl>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Nut-4C-240" firstAttribute="top" secondItem="76S-lf-Iah" secondAttribute="top" constant="20" id="6V8-jS-VE5"/>
-                            <constraint firstItem="TBN-95-oEC" firstAttribute="width" secondItem="TBN-95-oEC" secondAttribute="height" multiplier="23:10" id="gFy-im-UHE"/>
+                            <constraint firstItem="iYP-jl-KeE" firstAttribute="top" secondItem="76S-lf-Iah" secondAttribute="top" constant="20" id="hnj-4o-cOY"/>
                         </constraints>
                         <shadow key="shadow">
                             <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </shadow>
                     </view>
                     <connections>
-                        <outlet property="themeSegmentedButton" destination="fLf-dg-Rnc" id="Dgg-v4-oUL"/>
-                        <outlet property="transparentCheckbox" destination="7E8-8d-ziw" id="DVI-PO-Cbj"/>
+                        <outlet property="useDarkThemeBtn" destination="iYP-jl-KeE" id="QGg-TI-49u"/>
                     </connections>
                 </viewController>
                 <customObject id="RMA-Wb-DJt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

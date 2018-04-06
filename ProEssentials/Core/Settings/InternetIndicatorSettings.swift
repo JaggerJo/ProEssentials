@@ -18,9 +18,9 @@ public class InternetIndicatorSettings : Setting {
     public var showNotifications: Bool;
     
     required public init() {
-        host = "1.1.1.1"
-        pingInterval = 2
-        pingTimeout = 2
+        host = "google.com"
+        pingInterval = 1
+        pingTimeout = 1
         showNotifications = true;
     }
 }
