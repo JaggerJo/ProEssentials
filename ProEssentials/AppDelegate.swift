@@ -16,6 +16,10 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         NSUserNotificationCenter.default.delegate = self
+        reloadTheme.observeNext(with:{ enabled in
+            print("reloadTheme invoked (AppDelegate)")
+            self.applyTheme()
+        })
         applyTheme()
         createIndicators()
     }

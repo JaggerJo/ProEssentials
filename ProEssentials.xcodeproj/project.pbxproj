@@ -12,6 +12,7 @@
 		7A31EF8C205E78FB00EB0F01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A31EF8B205E78FB00EB0F01 /* Assets.xcassets */; };
 		7A31EF8F205E78FB00EB0F01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A31EF8D205E78FB00EB0F01 /* Main.storyboard */; };
 		7A31EF9B205E78FB00EB0F01 /* ProEssentialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A31EF9A205E78FB00EB0F01 /* ProEssentialsTests.swift */; };
+		7A3FB7F5207D4AFE00FD3E01 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3FB7F4207D4AFE00FD3E01 /* Events.swift */; };
 		7AD34224206A3C25009F2479 /* InternetIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34223206A3C25009F2479 /* InternetIndicator.swift */; };
 		7AD34227206A3CF7009F2479 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD34226206A3CF7009F2479 /* Indicator.swift */; };
 		7AD3422D206A798F009F2479 /* InternetIndicatorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD3422C206A798F009F2479 /* InternetIndicatorSettings.swift */; };
@@ -110,6 +111,7 @@
 		7A31EF9A205E78FB00EB0F01 /* ProEssentialsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProEssentialsTests.swift; sourceTree = "<group>"; };
 		7A31EF9C205E78FB00EB0F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A31EFA5205EA11300EB0F01 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
+		7A3FB7F4207D4AFE00FD3E01 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		7AD34223206A3C25009F2479 /* InternetIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetIndicator.swift; sourceTree = "<group>"; };
 		7AD34226206A3CF7009F2479 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		7AD3422C206A798F009F2479 /* InternetIndicatorSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetIndicatorSettings.swift; sourceTree = "<group>"; };
@@ -222,6 +224,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7A3FB7F3207D4AEA00FD3E01 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				7A3FB7F4207D4AFE00FD3E01 /* Events.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		7AD34220206A3BC1009F2479 /* Internet */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +243,7 @@
 		7AD3424E206BBC20009F2479 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7A3FB7F3207D4AEA00FD3E01 /* Events */,
 				7AF36C35206FE10700DAF61D /* UI */,
 				7A19532F205F96D60014DE06 /* Indicators */,
 				7AD3424F206BBC2B009F2479 /* Settings */,
@@ -594,6 +605,7 @@
 				7AD34224206A3C25009F2479 /* InternetIndicator.swift in Sources */,
 				7A31EF88205E78FB00EB0F01 /* AppDelegate.swift in Sources */,
 				7AF36C32206FD54000DAF61D /* IndicatorsViewController.swift in Sources */,
+				7A3FB7F5207D4AFE00FD3E01 /* Events.swift in Sources */,
 				7AD3422D206A798F009F2479 /* InternetIndicatorSettings.swift in Sources */,
 				7AF36C34206FE07F00DAF61D /* InternetIndicatorViewController.swift in Sources */,
 				7AD34227206A3CF7009F2479 /* Indicator.swift in Sources */,

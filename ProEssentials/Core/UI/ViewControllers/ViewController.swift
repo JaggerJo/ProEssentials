@@ -22,6 +22,12 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        reloadTheme.observeNext(with:{ enabled in
+            print("reloadTheme invoked (ViewController)")
+            self.applyTheme()
+        })
+        
         applyTheme()
     }
     

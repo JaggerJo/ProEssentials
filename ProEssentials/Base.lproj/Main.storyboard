@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -778,16 +778,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iYP-jl-KeE">
-                                <rect key="frame" x="187" y="258" width="123" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="eGz-C7-j81"/>
-                                </constraints>
-                                <buttonCell key="cell" type="check" title="Use Dark Theme" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="EVV-Gq-7uj">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nut-4C-240">
                                 <rect key="frame" x="115" y="260" width="50" height="20"/>
                                 <constraints>
@@ -801,17 +791,39 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <segmentedControl verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FCh-ng-mp7">
+                                <rect key="frame" x="187" y="257" width="184" height="24"/>
+                                <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="7Ow-d5-PD4">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment label="System"/>
+                                        <segment label="Dark" selected="YES" tag="1"/>
+                                        <segment label="Light"/>
+                                    </segments>
+                                </segmentedCell>
+                            </segmentedControl>
+                            <button verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iYP-jl-KeE">
+                                <rect key="frame" x="187" y="229" width="123" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="eGz-C7-j81"/>
+                                </constraints>
+                                <buttonCell key="cell" type="check" title="Transcluent" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="EVV-Gq-7uj">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Nut-4C-240" firstAttribute="top" secondItem="76S-lf-Iah" secondAttribute="top" constant="20" id="6V8-jS-VE5"/>
-                            <constraint firstItem="iYP-jl-KeE" firstAttribute="top" secondItem="76S-lf-Iah" secondAttribute="top" constant="20" id="hnj-4o-cOY"/>
+                            <constraint firstItem="FCh-ng-mp7" firstAttribute="top" secondItem="76S-lf-Iah" secondAttribute="top" constant="20" id="yhV-8M-hSA"/>
                         </constraints>
                         <shadow key="shadow">
                             <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </shadow>
                     </view>
                     <connections>
-                        <outlet property="useDarkThemeBtn" destination="iYP-jl-KeE" id="QGg-TI-49u"/>
+                        <outlet property="themeSegBtn" destination="FCh-ng-mp7" id="DiJ-Yn-UW9"/>
+                        <outlet property="useTranscluentBtn" destination="iYP-jl-KeE" id="QGg-TI-49u"/>
                     </connections>
                 </viewController>
                 <customObject id="RMA-Wb-DJt" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -959,7 +971,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <font key="font" metaFont="message"/>
-                        <tabViewItems/>
                         <connections>
                             <outlet property="delegate" destination="SIN-XE-IGG" id="bPp-yx-acj"/>
                         </connections>
